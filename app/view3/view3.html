@@ -1,0 +1,40 @@
+<link href="css/view2stylesheet.css" rel="stylesheet" />
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation"><a href="#/view2">Kurse</a></li>
+  <li role="presentation" class="active"><a href="#/view3">Events</a></li>
+  <li role="presentation"><a href="#/view4">Tanzpartner</a></li>
+</ul>
+<div class="row">
+  <div class="col-md-3 filter">
+
+  </div>
+    <div class="col-md-9">
+
+      <div ng-repeat="party in second.data.events | filter:searchKeys.DanceStyle" >
+        <a ng-href="{{party.id}}"><div class="row courseDescriptions">
+          <div class="col-md-2">
+            {{party.date | date}}
+          </div>
+          <div class="col-md-2">
+            {{party.time}}
+          </div>
+          <div class="col-md-2">
+            {{party.styles}}
+          </div>
+          <div class="col-md-2">
+              {{party.location}}
+          </div>
+          <div class="col-md-2">
+            {{party.fee}}
+          </div>
+          <div class="col-md-2">
+
+          </div>
+          </a>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>

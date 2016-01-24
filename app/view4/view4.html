@@ -1,0 +1,24 @@
+<link href="css/view2stylesheet.css" rel="stylesheet" />
+
+
+<div class="row">
+  <ul class="nav nav-tabs nav-justified">
+    <li role="presentation"><a href="#/view2">Kurse</a></li>
+    <li role="presentation"><a href="#/view3">Events</a></li>
+    <li role="presentation" class="active"><a href="#/view4">Tanzpartner</a></li>
+  </ul>
+</div>
+
+<div class="row">
+      <div  ng-repeat="partner in second.data.tanzpartner | filter:searchKeys.DanceStyle">
+        <div class="thumbnail">
+        <img class="profilePic" ng-src="view4/{{partner.bild}}" alt="a" />
+        <div class="caption">
+          <h3><strong>{{partner.name}}</strong>, {{partner.alter}}</h3>
+          <p>...</p>
+          <p></p>
+        </div>
+      </div>
+  </div>
+
+</div>

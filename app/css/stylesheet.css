@@ -1,0 +1,320 @@
+  body {
+      padding-top: 0px;
+      font-size: 16px;
+      font-family: "Open Sans",serif;
+      background: transparent;
+  }
+  h1 {
+      font-family: "Abel", Arial, sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+  }
+  /* Override B3 .panel adding a subtly transparent background */
+  .panel {
+      background-color: rgba(255, 255, 255, 0.9);
+  }
+  .margin-base-vertical {
+      margin: 40px 0;
+  }
+html {
+    background: url(../bg.png) no-repeat center center fixed;
+    background-color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+
+  .navbar-brand {
+    padding: 0px;
+    padding-top: 5px;
+  }
+  #deineNahe {
+    background-color: red;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    padding-top: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.7em;
+    border-radius: 0px;
+
+  }
+  #headerRow {
+    padding-top: 15em;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  #searchRow {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    margin-top: 3.5em;
+
+    background: rgba(255, 255, 255, .3);
+  }
+
+  .btn {
+    padding-top: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.5em;
+    font-size: 1em;
+    border-radius: 4px;
+  }
+  #suchButton {
+    padding-left: 6em;
+    padding-right: 6em;
+    border-radius: 0px;
+    background-color: limegreen;
+    color: white;
+    border-color: limegreen;
+    font-family:sans-serif;
+    font-weight: bolder;
+  }
+  .wrapper {
+    z-index:600;
+    position:relative
+}
+
+.pattern {
+    background-image:url(../images/pattern.png);
+    background-repeat: repeat;
+    background-attachment:scroll;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0
+}
+
+.divider {
+    background-image:url(../images/divider.png);
+    display:block;
+    width:300px;
+    height:35px;
+    margin:10px auto
+}
+
+#colorize {
+    color:#f1c40f;
+    font-family:'Lato',sans-serif;
+    font-size:40px
+}
+.big-background {
+    z-index:550;
+    text-align:center;
+    height:100%;
+    min-height:100%;
+    position:relative;
+    overflow:hidden
+}
+
+.big-background .big-background-container {
+    width:830px;
+    max-width:100%;
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%)
+}
+
+.big-background-title {
+    font-family:'Raleway',sans-serif;
+    font-size:78px;
+    color:#fff;
+    font-weight:300;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:22px;
+    padding-top:20px;
+    display:inline-block;
+    background-attachment:scroll;
+    background-repeat:repeat-x;
+    background-position:top center
+}
+
+a.big-background-btn {
+    font-family:'Lato',sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#fff;
+    background:transparent;
+    border:2px solid #fff;
+    padding:10px 14px;
+    cursor:pointer;
+    letter-spacing:2px;
+    text-align:center;
+    display:inline-block;
+    -webkit-transition:.4s background ease;
+    -moz-transition:.4s background ease;
+    -o-transition:.4s background ease;
+    transition:.4s background ease;
+}
+
+.big-background-btn:hover {
+    color:#fff;
+    background:rgba(255,255,255,0.20)
+}
+
+.big-background-default-image {
+    background:url(../images/sunset.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    width:100%;
+    height:100%;
+    z-index:0;
+    backface-visibility:hidden
+}
+.about-section {
+    font-family:'Lato',sans-serif;
+    color:#7f8c8d;
+    background:#fff;
+    padding:60px 20px
+}
+
+.about-section-container {
+    text-align:center;
+    padding-bottom:50px
+}
+
+.about-section-title {
+    font-family:'Raleway',sans-serif;
+    font-size:40px;
+    background:#fff;
+    color:#3d566e;
+    padding:0 35px;
+    margin-bottom:22px;
+    background-attachment:scroll;
+    background-repeat:repeat-x;
+    background-position:center center;
+    text-transform:uppercase
+}
+
+a.about-section-btn {
+    font-family:'Lato',sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#34495e;
+    background:transparent;
+    border:2px solid #34495e;
+    padding:10px 14px;
+    cursor:pointer;
+    letter-spacing:2px;
+    text-align:center;
+    display:inline-block;
+    -webkit-transition:.4s background ease;
+    -moz-transition:.4s background ease;
+    -o-transition:.4s background ease;
+    transition:.4s background ease;
+}
+
+.about-section-btn:hover {
+    color:#fff;
+    background: #34495e;
+}
+.small-background-section {
+    font-family:'Raleway',sans-serif;
+    padding:100px 0;
+    position:relative;
+    width:100%;
+    overflow:hidden
+}
+
+.small-background-container {
+    position:relative;
+    text-align:center
+}
+.YTPOverlay {
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* msie */
+  background-color: #000;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "ProximaNova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    -moz-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.nav>li>a {
+    font-family: "ProximaNova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #d7d7d7;
+}
+#telefonnummer {
+    color: #d7d7d7;
+}
+
+
+.small-background-title {
+    font-size:40px;
+    color:#f1c40f;
+    font-weight:300;
+    z-index:10;
+    display:inline-block;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    margin-top: 20px;
+    position:relative;
+    background-attachment:scroll;
+    background-repeat:repeat-x;
+    background-position:top center
+}
+
+.socials a {
+    color:#fff
+}
+
+.socials a:hover {
+    color:#bdc3c7
+}
+@media screen and (max-width: 768px) {
+.about-section-title {
+    line-height:1
+}
+}
+
+@media screen and (max-width: 480px) {
+.big-background-title {
+    font-size:58px
+}
+
+.small-background-title {
+    line-height:1
+}
+
+/*.player{ display: none;}  -&gt; If you want to remove the video bg on a specific viewport w/o plugin*/
+}
+
+@media screen and (max-width: 360px) {
+.big-background-title,#colorize {
+    line-height:1
+}
+}
+
+@media screen and (max-width: 320px) {
+.small-background-title {
+    font-size:30px
+}
+}
+@media screen and (max-width: 480px) {
+.player{ display: none; }
+}
