@@ -1,18 +1,35 @@
 <link href="css/view2stylesheet.css" rel="stylesheet" />
+
 <ul class="nav nav-tabs nav-justified">
   <li role="presentation" class="active"><a href="#/view2">Kurse</a></li>
   <li role="presentation"><a href="#/view3">Events</a></li>
   <li role="presentation"><a href="#/view4">Tanzpartner</a></li>
 </ul>
 <div class="row">
-  <div class="col-md-3 filter">
-
+  <div class="col-md-2 filter">
+    <div class="funkyradio">
+      <div class="funkyradio-primary">
+        <input type="checkbox" name="checkbox" id="Kizomba" ng-model="Kizomba" ng-change="vm.myClick(vm.myChkModel)">
+        <label for="Kizomba">Kizomba</label>
+      </div>
+      <div class="funkyradio-primary">
+          <input type="checkbox" name="checkbox" id="SalsaCubana" ng-model="SalsaCubana" ng-change="vm.myClick(vm.myChkModel)">
+        <label for="SalsaCubana">Salsa Cubana</label>
+      </div>
+      <div class="funkyradio-primary">
+          <input type="checkbox" name="checkbox" id="SalsaLA" ng-model="SalsaLA" ng-change="vm.myClick(vm.myChkModel)">
+        <label for="SalsaLA">Salsa LA</label>
+      </div>
+    </div>
   </div>
-    <div class="col-md-9">
 
+    <div class="col-md-10">
     <div ng-repeat="course in second.data.kurse | filter:searchKeys.DanceStyle" >
       <div>
         <div class="row courseDescriptions">
+          <div class="col-md-2">
+            {{course.StartingDay | date}}
+          </div>
         <div class="col-md-2">
           {{course.time | date}}
         </div>
@@ -27,14 +44,8 @@
         </div>
         <div class="col-md-2">
           {{course.duration}}
+            <a class="btn icon-btn btn-primary" href="#"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>Like</a>
         </div>
-        <div class="col-md-2">
-          <button type="button" class="btn btn-primary" ng-click="booking()">Book</button>
-        </div>
-        </div>
-        </div>
-
-
     </div>
 
   </div>

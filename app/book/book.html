@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>booking</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content=" " />
+    <link rel='stylesheet' href='book.css' type='text/css' />
+    <script src="book.js"></script>
 </head>
-<body>
-<p>booooooookkkkkkkkk</p>
+<body onload="document.registration.userid.focus();">
+<h1>BOOK YOUR SEATS</h1>
+<p>Please Enter your basic data</p>
+<form name='registration' onSubmit="return formValidation();">
+    <ul style="list-style-type: none;">
+        <li><label for="userid">User id:</label></li>
+        <li><input type="text" name="userid" size="12" /></li>
+        <li><label for="passid">Password:</label></li>
+        <li><input type="password" name="passid" size="12" /></li>
+        <li><label for="username">Name:</label></li>
+        <li><input type="text" name="username" size="50" /></li>
+        <li><label for="address">Address:</label></li>
+        <li><input type="text" name="address" size="50" /></li>
+        <li><label for="danceschool">Dance School:</label></li>
+        <li><select name="country">
+            <option selected="" value="Default">(Please select a dance school)</option>
+            <option value="KS">K-system</option>
+            <option value="LTK">Latin Team Kiel</option>
+            <option value="EL">Estudio Latinoamérica</option>
+            <option value="SAM">Salsa am Meer</option>
+            <option value="AD">Uni Tanz</option>
+        </select></li>
+        <li><label for="dancesyle">Dance Style:</label></li>
+        <li><select name="Style">
+            <option selected="" value="Default">(Please select a dance style)</option>
+            <option value="Kizomba">Kizomba</option>
+            <option value="SalasaLA">Salsa LA</option>
+            <option value="SalasaCubana">SalsaCubana</option>
+        </select></li>
+        <li><label id="payment">Payment:</label></li>
+        <li><input type="radio" name="mc" value="Master Card" /><span>Master Card</span></li>
+        <li><input type="radio" name="vc" value="Visa Card" /><span>Visa Card</span></li>
+        <li><input type="radio" name="vc" value="EC Card" /><span>EC Card</span></li>
+        <li><label for="email">Email:</label></li>
+        <li><input type="text" name="email" size="50" /></li>
+        <li><label id="gender">Sex:</label></li>
+        <li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+        <li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+        <li><label for="desc">About:</label></li>
+        <li><textarea name="desc" id="desc"></textarea></li>
+        <li><input type="submit" name="submit" value="Submit" /></li>
+    </ul>
+</form>
 </body>
 </html>

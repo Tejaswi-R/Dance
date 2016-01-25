@@ -1,20 +1,12 @@
-<link href="css/view2stylesheet.css" rel="stylesheet" />
-
-
-<div class="row">
-    <ul class="nav nav-tabs nav-justified">
-        <li role="presentation"><a href="#/view2">Kurse</a></li>
-        <li role="presentation"><a href="#/view3">Events</a></li>
-        <li role="presentation" class="active"><a href="#/view4">Tanzpartner</a></li>
-    </ul>
-</div>
 
 <div ng-repeat="school in second.data.school | filter: { id : second.searchedSchool} " >
                 <div>{{school.studio}}</div>
                 <div>{{school.address}}</div>
                 <div>{{school.description}}</div>
                 <div>{{school.rating}}</div>
+                <img class="photo" ng-src="{{school.photo}}" alt="a" />
                 <div>{{school.photo}}</div>
+                <img class="logo" ng-src="{{school.logo}}" alt="a" />
                 <div>{{school.logo}}</div>
 
                 <div ng-repeat="course in second.data.kurse | filter: { studio : school.studio}">
@@ -28,11 +20,14 @@
                             <div class="col-md-2">
                                 {{course.level}}
                             </div>
-                            <div class="col-md-2">
-                                {{course.studio}}
-                            </div>
+                            <!--<div class="col-md-2">-->
+                                <!--{{course.studio}}-->
+                            <!--</div>-->
                             <div class="col-md-2">
                                 {{course.duration}}
+                            </div>
+                            <div class="col-md-2">
+                            <button type="button" class="btn btn-primary" ng-click="booking()">Book</button>
                             </div>
                         </div>
                     </div>
