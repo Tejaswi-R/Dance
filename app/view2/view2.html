@@ -11,7 +11,7 @@
     <div class="col-md-9">
 
     <div ng-repeat="course in second.data.kurse | filter:searchKeys.DanceStyle" >
-      <a ng-href="#view2">
+      <div>
         <div class="row courseDescriptions">
         <div class="col-md-2">
           {{course.time | date}}
@@ -22,17 +22,17 @@
         <div class="col-md-2">
           {{course.level}}
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" ng-click="displayschool(course.studio,course.level)">
             {{course.studio}}
         </div>
         <div class="col-md-2">
           {{course.duration}}
         </div>
         <div class="col-md-2">
-          Book
+          <button type="button" class="btn btn-primary" ng-click="booking()">Book</button>
         </div>
         </div>
-        </a>
+        </div>
 
 
     </div>
