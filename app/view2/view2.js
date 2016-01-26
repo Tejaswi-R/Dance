@@ -23,6 +23,14 @@ angular.module('myApp.view2', ['ngRoute'])
             templateUrl: 'book/book.html',
             controller: 'SecondCtrl as second'
         });
+        $routeProvider.when('/aboutus', {
+            templateUrl: 'about_us/about.html',
+            controller: 'SecondCtrl as second'
+        });
+        $routeProvider.when('/impressum', {
+            templateUrl: 'about_us/impressum.html',
+            controller: 'SecondCtrl as second'
+        });
 }])
 
 .controller('SecondCtrl', function($scope, sharedProperties, $location, $routeParams) {
@@ -74,49 +82,45 @@ angular.module('myApp.view2', ['ngRoute'])
         }
 
     this.data = {
-            kurse: [
-                {"id": 1, "time":" 20.00 - 21.00","StartingDay":"19-Feb","style":"Latin Team Kiel","level":"Anfänger 2","studio":"K-Systems","duration":"10 Wochen","Fees":"60"},
-                {"id": 2, "time":"20:10 - 21:00","StartingDay":"2-Feb","style":"Latin Team Kiel","level":"Fortgeschritten","studio":"Latin Team Kiel","duration":"8 Wochen","Fees":"5 Euro pro Termin"},
-                {"id": 3, "time":"21.00 - 22.00","StartingDay":"2-Mar","style":"Latin Team Kiel","level":"Einsteiger","studio":"K-Systems","duration":"8 Wochen","Fees":"5 Euro pro Termin"},
-                {"id": 4, "time":"16:15 - 17:30","Starting Day":"Sonntags","style":"Salsa Cubana","level":"Anfänger 1","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"100/50*"},
-                {"id": 5, "time":"19.00 - 20.30","StartingDay":"12-Feb","style":"Salsa Cubana","level":"Anfänger 1","studio":"Salsa am Meer","duration":"6 Wochen","Fees":"69/49*"},
-                {"id": 6, "time":"21.00 - 22.15","StartingDay":"Mittwochs","style":"Salsa Cubana","level":"Anfänger 1","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"100/50*"},
-                {"id": 7, "time":"17.45 - 19.00","StartingDay":"Sonntags","style":"Salsa Cubana","level":"Anfänger 2","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"},
-                {"id": 8, "time":"18.30 - 19.45","StartingDay":"Dienstags","style":"Salsa Cubana","level":"Anfänger 2","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"},
-                {"id": 9, "time":" 20.30 - 22.00","StartingDay":"12-Feb","style":"Salsa Cubana","level":"Anfänger 2","studio":"Salsa am Meer","duration":"6 Wochen","Fees":"69/49*"},
-                {"id": 10, "time":"21.00 - 22.15","StartingDay":"Mittwochs","style":"Salsa Cubana","level":"Anfänger 2","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"},
-                {"id": 11, "time":" 20.00 - 22.00 ","StartingDay":"7-Feb","style":"Salsa Cubana","level":"Mittelstufe","studio":"Salsa am Meer","duration":"6 Wochen","Fees":"69/49*"},
+        kurse: [
 
-                ,{"time":"18.00 - 19.15","StartingDay":"Mittwochs","style":"Salsa Cubana","level":"Oberstufe","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"}
+            {"id": 1, "time":" 20.00 - 21.00","StartingDay":"19-Jan-16","style":"Salsa LA","level":"Anfänger 2","studio":"K-Systems","duration":"10 Wochen","Fees":"60"},
+            {"id": 2, "time":"20:10 - 21:00","StartingDay":"02-Jan-16","style":"Salsa LA","level":"Fortgeschritten","studio":"Salsa LA","duration":"8 Wochen","Fees":"5 Euro pro Termin"},
+            {"id": 3, "time":"21.00 - 22.00","StartingDay":"02-Dec-16","style":"Salsa LA","level":"Einsteiger","studio":"K-Systems","duration":"8 Wochen","Fees":"5 Euro pro Termin"},
+            {"id": 4, "time":"16:15 - 17:30","StartingDay":"30-Jan-16","style":"Salsa Cubana","level":"Anfänger 1","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"100/50*"},
+            {"id": 5, "time":"19.00 - 20.30","StartingDay":"12-Jan-16","style":"Salsa Cubana","level":"Anfänger 1","studio":"Salsa am Meer","duration":"6 Wochen","Fees":"69/49*"},
+            {"id": 6, "time":"21.00 - 22.15","StartingDay":"02-Feb-16","style":"Salsa Cubana","level":"Anfänger 1","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"100/50*"},
+            {"id": 7, "time":"17.45 - 19.00","StartingDay":"30-Jan-16","style":"Salsa Cubana","level":"Anfänger 2","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"},
+            {"id": 8, "time":"18.30 - 19.45","StartingDay":"28-Feb-16","style":"Salsa Cubana","level":"Anfänger 2","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"},
+            {"id": 9, "time":" 20.30 - 22.00","StartingDay":"12-Jan-16","style":"Salsa Cubana","level":"Anfänger 2","studio":"Salsa am Meer","duration":"6 Wochen","Fees":"69/49*"},
+            {"id": 10, "time":"21.00 - 22.15","StartingDay":"02-Feb-16","style":"Salsa Cubana","level":"Anfänger 2","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"},
+            {"id": 11, "time":" 20.00 - 22.00 ","StartingDay":"07-Jan-16","style":"Salsa Cubana","level":"Mittelstufe","studio":"Salsa am Meer","duration":"6 Wochen","Fees":"69/49*"},
 
-                ,{"time":"19.30 - 20.45","StartingDay":"Montags","style":"Salsa Cubana","level":"Oberstufe","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"}
+            ,{"time":"18.00 - 19.15","StartingDay":"02-Feb-16","style":"Salsa Cubana","level":"Oberstufe","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"}
 
-                ,
-                {"time":"20.00 - 21.15 Uhr","StartingDay":"Montags","style":"Salsa Cubana","level":"Oberstufe","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"}
+            ,{"time":"19.30 - 20.45","StartingDay":"30-Jan-16","style":"Salsa Cubana","level":"Oberstufe","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"}
 
-                ,
-                {"time":"19.00 - 20.00","StartingDay":"11-Feb","style":"Kizomba","level":"Anfänger 1","studio":"K-Systems","duration":"8 Wochen","Fees":"54/44*"}
+            ,
+            {"time":"20.00 - 21.15 Uhr","StartingDay":"30-Jan-16","style":"Salsa Cubana","level":"Oberstufe","studio":"Estudio Latinoamérica","duration":"fortlaufend","Fees":"135/67,50*"}
 
-                ,{"time":"20:00-21:00","StartingDay":"Donnerstags","style":"Kizomba","level":"Anfänger","studio":"DIE VILLA KLUB","duration":"fortlaufend","Fees":"20 Euro pro Monat"}
+            ,
+            {"time":"19.00 - 20.00","StartingDay":"11-Jan-16","style":"Kizomba","level":"Anfänger 1","studio":"K-Systems","duration":"8 Wochen","Fees":"54/44*"}
 
-                ,{"time":"20.00 - 21.00","StartingDay":"2-March","style":"Kizomba","level":"Anfänger","studio":"Uni Tanz","duration":"Mittwochs","Fees":"25 Euro"}
+            ,{"time":"20:00-21:00","StartingDay":"01-Apr-16","style":"Kizomba","level":"Anfänger","studio":"DIE VILLA KLUB","duration":"fortlaufend","Fees":"20 Euro pro Monat"}
 
-                ,
-                {"time":"19.30-20:45","StartingDay":"Dienstags","style":"Kizomba","level":"Mittelstufe","studio":"DIE VILLA KLUB","duration":"fortlaufend","Fees":"20 Euro pro Monat"}
+            ,{"time":"20.00 - 21.00","StartingDay":"02-Mar-16","style":"Kizomba","level":"Anfänger","studio":"CAU Uni Sport","duration":"02-Feb-16","Fees":"25 Euro"}
 
-                ,{"time":"20:45-22:00","StartingDay":"Dienstags","style":"Kizomba","level":"Oberstufe","studio":"DIE VILLA KLUB","duration":"fortlaufend","Fees":"20 Euro pro Monat"}
+            ,
+            {"time":"19.30-20:45","StartingDay":"28-Feb-16","style":"Kizomba","level":"Mittelstufe","studio":"DIE VILLA KLUB","duration":"fortlaufend","Fees":"20 Euro pro Monat"}
 
+            ,{"time":"20:45-22:00","StartingDay":"28-Feb-16","style":"Kizomba","level":"Oberstufe","studio":"DIE VILLA KLUB","duration":"fortlaufend","Fees":"20 Euro pro Monat"}
 
-
-            ],
+        ],
         events: [
 
-            {"id": 1, "time":" 21.00 - 24.00","date":"5-Feb","styles":"Kizomba","location":"DIE VILLA Klub Legienstr. 40 24103 Kiel","Fee":"3"},
-            {"id": 2, "time":" 21.00 - 24.00","date":"5-Feb","styles":"Latin Team Kiel","location":"DIE VILLA Klub Legienstr. 40 24103 Kiel","Fee":"3"},
-            {"id": 3, "time":" 21.00 - 24.00","date":"5-Feb","styles":"Salsa Cubana","location":"DIE VILLA Klub Legienstr. 40 24103 Kiel","Fee":"3"},
-
-
-
+            {"id": 1, "time":" 21.00 - 24.00","date":"08-Apr-16","styles":"Kizomba","location":"DIE VILLA Klub Legienstr. 40 24103 Kiel","Fee":"3"},
+            {"id": 2, "time":" 21.00 - 24.00","date":"08-Apr-16","styles":"Salsa LA","location":"DIE VILLA Klub Legienstr. 40 24103 Kiel","Fee":"3"},
+            {"id": 3, "time":" 21.00 - 24.00","date":"08-Apr-16","styles":"Salsa Cubana","location":"DIE VILLA Klub Legienstr. 40 24103 Kiel","Fee":"3"},
 
         ],
  tanzpartner: [

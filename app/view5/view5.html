@@ -1,13 +1,15 @@
+<link href="css/view2stylesheet.css" rel="stylesheet" />
 
 <div ng-repeat="school in second.data.school | filter: { id : second.searchedSchool} " >
-                <div>{{school.studio}}</div>
-                <div>{{school.address}}</div>
-                <div>{{school.description}}</div>
-                <div>{{school.rating}}</div>
-                <img class="photo" ng-src="{{school.photo}}" alt="a" />
-                <div>{{school.photo}}</div>
-                <img class="logo" ng-src="{{school.logo}}" alt="a" />
-                <div>{{school.logo}}</div>
+                <div><h1>{{school.studio}}</h1></div>
+    <img class="logo" ng-src="{{school.logo}}" alt="" width="100px" />
+    <div><p>{{school.description}}</p></div>
+                <div><p>{{school.address}}</p></div>
+    <div><p>{{school.description}}</p></div>
+                <div><p>{{school.rating}}</p></div>
+                <img class="photo" ng-src="{{school.photo}}" alt="" width="500px" />
+                <!--<div>{{school.photo}}</div>-->
+                <!--<div>{{school.logo}}</div>-->
 
                 <div ng-repeat="course in second.data.kurse | filter: { studio : school.studio}">
                         <div class="row courseDescriptions">
